@@ -1,9 +1,9 @@
 
 function Header() {
     return (
-        <>
-        <h1>This is a header</h1>
-        </>
+        <header>
+            <h1>Comics n'Chill</h1>
+        </header>
     );
 }
 

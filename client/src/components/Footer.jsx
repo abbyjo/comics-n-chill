@@ -1,9 +1,9 @@
 
 function Footer() {
     return (
-        <>
-        <h1>This is a footer.</h1>
-        </>
+        <footer>
+            <h3>Comics N' Chill © 2024</h3>
+        </footer>
     );
 }
 
