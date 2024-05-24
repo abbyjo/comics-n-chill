@@ -7,11 +7,11 @@ function Home() {
         <fieldset>
             <legend>Drink?</legend>
             <p>
-                <input type="radio" name="alcoholic" id="alcoholic" value="true"/>
+                <input type="radio" name="drinks" id="alcoholic" value="true"/>
                 <label for="alcoholic">Alcoholic</label>
             </p>
             <p>
-                <input type="radio" name="non-alcoholic" id="non-alcoholic" value="false"/>
+                <input type="radio" name="drinks" id="non-alcoholic" value="false"/>
                 <label for="non-alcoholic">Non-Alcoholic</label>
             </p>
         </fieldset>
