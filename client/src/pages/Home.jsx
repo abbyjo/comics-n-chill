@@ -1,58 +1,71 @@
+import { useState } from 'react';
 
 function Home() {
+    const [formData, setFormData] = useState({drink: '', genre: ''});
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({ ...formData, [name]: value });
+      };
+      
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+        console.log("I've been clicked...!");
+        console.log(formData)
+    }
     return (
 <main>
     <h1>This is the Home page.</h1>
-    <form>
+    <form onSubmit={handleFormSubmit}>
         <fieldset>
             <legend>Drink?</legend>
             <p>
-                <input type="radio" name="drinks" id="alcoholic" value="true"/>
-                <label for="alcoholic">Alcoholic</label>
+                <input type="radio" name="drink" id="alcoholic" value="true" onChange={handleInputChange}/>
+                <label>Alcoholic</label>
             </p>
             <p>
-                <input type="radio" name="drinks" id="non-alcoholic" value="false"/>
-                <label for="non-alcoholic">Non-Alcoholic</label>
+                <input type="radio" name="drink" id="non-alcoholic" value="false" onChange={handleInputChange}/>
+                <label>Non-Alcoholic</label>
             </p>
         </fieldset>
 
         <fieldset>
             <legend>Genre?</legend>
             <p>
-                <input type="checkbox" name="romance" id="romance" value="romance" />
-                <label for="romance">Romance</label>
+                <input onChange={handleInputChange} type="radio" name="genre" id="romance" value="romance" />
+                <label >Romance</label>
             </p>
             <p>
-                <input type="checkbox" name="sci-fi" id="sci-fi" value="sci-fi" />
-                <label for="sci-fi">Sci-Fi</label>
+                <input onChange={handleInputChange} type="radio" name="genre" id="sci-fi" value="sci-fi" />
+                <label >Sci-Fi</label>
             </p>
             <p>
-                <input type="checkbox" name="horror" id="horror" value="horror" />
-                <label for="horror">Horror</label>
+                <input onChange={handleInputChange} type="radio" name="genre" id="horror" value="horror" />
+                <label >Horror</label>
             </p>
             <p>
-                <input type="checkbox" name="comedy" id="comedy" value="comedy" />
-                <label for="sci-fi">Comedy</label>
+                <input onChange={handleInputChange} type="radio" name="genre" id="comedy" value="comedy" />
+                <label >Comedy</label>
             </p>
             <p>
-                <input type="checkbox" name="fantasy" id="fantasy" value="fantasy" />
-                <label for="fantasy">Fantasy</label>
+                <input onChange={handleInputChange} type="radio" name="genre" id="fantasy" value="fantasy" />
+                <label >Fantasy</label>
             </p>
             <p>
-                <input type="checkbox" name="mystery" id="mystery" value="mystery" />
-                <label for="fantasy">Mystery</label>
+                <input onChange={handleInputChange} type="radio" name="genre" id="mystery" value="mystery" />
+                <label >Mystery</label>
             </p>
             <p>
-                <input type="checkbox" name="historical" id="historical" value="historical" />
-                <label for="fantasy">Historical</label>
+                <input onChange={handleInputChange} type="radio" name="genre" id="historical" value="historical" />
+                <label >Historical</label>
             </p>
             <p>
-                <input type="checkbox" name="action" id="action" value="action" />
-                <label for="fantasy">Action-Adventure</label>
+                <input onChange={handleInputChange} type="radio" name="genre" id="action" value="action" />
+                <label >Action-Adventure</label>
             </p>
             <p>
-                <input type="checkbox" name="slice-of-life" id="slice-of-life" value="slice-of-life" />
-                <label for="slice-of-life">Slice of Life</label>
+                <input onChange={handleInputChange} type="radio" name="genre" id="slice-of-life" value="slice-of-life" />
+                <label >Slice of Life</label>
             </p>
         </fieldset>
         <input type="submit" value="Get Results"></input>
