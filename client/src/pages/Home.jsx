@@ -10,8 +10,13 @@ function Home() {
       
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log("I've been clicked...!");
-        console.log(formData)
+
+        if (formData.drink === '' || formData.genre === '') {
+            alert("Please choose a drink & genre!")
+        } else {
+            console.log("I've been clicked...!");
+            console.log(formData)  
+        }
     }
     return (
 <main>
