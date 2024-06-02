@@ -65,12 +65,12 @@ function Home() {
                 <label >Historical</label>
             </p>
             <p>
-                <input onChange={handleInputChange} type="radio" name="genre" id="action" value="action" />
+                <input onChange={handleInputChange} type="radio" name="genre" id="action" value="action-adventure" />
                 <label >Action-Adventure</label>
             </p>
             <p>
-                <input onChange={handleInputChange} type="radio" name="genre" id="slice-of-life" value="slice-of-life" />
-                <label >Slice of Life</label>
+                <input onChange={handleInputChange} type="radio" name="genre" id="drama" value="drama" />
+                <label >Drama</label>
             </p>
         </fieldset>
         <input type="submit" value="Get Results"></input>
