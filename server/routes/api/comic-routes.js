@@ -7,7 +7,7 @@ const {
   editComic,
   removeComic,
   genreSearch  
-} = require('../../controllers/comic-controllers');
+} = require('../../controllers/comic-controllers.js');
 
 // "comics-n-chill.com/api/comics"
 // Gets all comics, Adds new comic to database

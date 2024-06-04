@@ -7,7 +7,7 @@ const {
   editMusic,
   removeMusic,
   genreSelect  
-} = require('../../controllers/music-controllers');
+} = require('../../controllers/music-controllers.js');
 
 // "comics-n-chill.com/api/music"
 // Gets all playlists, Adds new playlist to database
