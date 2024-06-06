@@ -32,7 +32,7 @@ async function createComic({body}, res) {
         const newComic = await Comic.create({
             title: body.title,
             author: body.author,
-            description: body.desc,
+            description: body.description,
             cover:body.cover,
             link: body.link, 
             genre: body.genre
@@ -54,7 +54,7 @@ async function editComic(req, res) {
         )
 
         if (!myComic) {
-            res.statys(404).json({ message: "No comic with that ID found, please try again!"})
+            res.status(404).json({ message: "No comic with that ID found, please try again!"})
         }
 
         res.json({message: "Comic updated successfully!", myComic})
@@ -83,8 +83,8 @@ async function removeComic(req, res) {
 // Function to get all comics matching requested genre 
 async function genreSearch(req, res) {
     try {
-        const genreComics = await Comic.find({ genre: req.params.genre });
-        res.json(genreComics)
+        const genreComics = await Comic.find({ genre: {$all: req.params.genre} });
+        res.json(genreComics);
     } catch (err) {
         res.status(500).json(err);
         console.log(err)

@@ -37,39 +37,39 @@ function Home() {
         <fieldset>
             <legend>Genre?</legend>
             <p>
-                <input onChange={handleInputChange} type="radio" name="genre" id="romance" value="romance" />
+                <input onChange={handleInputChange} type="radio" name="genre" id="romance" value="Romance" />
                 <label >Romance</label>
             </p>
             <p>
-                <input onChange={handleInputChange} type="radio" name="genre" id="sci-fi" value="sci-fi" />
+                <input onChange={handleInputChange} type="radio" name="genre" id="sci-fi" value="Sci-fi" />
                 <label >Sci-Fi</label>
             </p>
             <p>
-                <input onChange={handleInputChange} type="radio" name="genre" id="horror" value="horror" />
+                <input onChange={handleInputChange} type="radio" name="genre" id="horror" value="Horror" />
                 <label >Horror</label>
             </p>
             <p>
-                <input onChange={handleInputChange} type="radio" name="genre" id="comedy" value="comedy" />
+                <input onChange={handleInputChange} type="radio" name="genre" id="comedy" value="Comedy" />
                 <label >Comedy</label>
             </p>
             <p>
-                <input onChange={handleInputChange} type="radio" name="genre" id="fantasy" value="fantasy" />
+                <input onChange={handleInputChange} type="radio" name="genre" id="fantasy" value="Fantasy" />
                 <label >Fantasy</label>
             </p>
             <p>
-                <input onChange={handleInputChange} type="radio" name="genre" id="mystery" value="mystery" />
+                <input onChange={handleInputChange} type="radio" name="genre" id="mystery" value="Mystery" />
                 <label >Mystery</label>
             </p>
             <p>
-                <input onChange={handleInputChange} type="radio" name="genre" id="historical" value="historical" />
+                <input onChange={handleInputChange} type="radio" name="genre" id="historical" value="Historical" />
                 <label >Historical</label>
             </p>
             <p>
-                <input onChange={handleInputChange} type="radio" name="genre" id="action" value="action-adventure" />
+                <input onChange={handleInputChange} type="radio" name="genre" id="action" value="Action-Adventure" />
                 <label >Action-Adventure</label>
             </p>
             <p>
-                <input onChange={handleInputChange} type="radio" name="genre" id="drama" value="drama" />
+                <input onChange={handleInputChange} type="radio" name="genre" id="drama" value="Drama" />
                 <label >Drama</label>
             </p>
         </fieldset>

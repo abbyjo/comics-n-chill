@@ -19,6 +19,6 @@ router.route('/:comicID').get(getMyComic).put(editComic).delete(removeComic);
 
 // "comics-n-chill.com/api/comics/:genre"
 // Filters comic entries by genre 
-router.route('/:genre').get(genreSearch)
+router.route('/genre/:genre').get(genreSearch)
 
 module.exports = router;
